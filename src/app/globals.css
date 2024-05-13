@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* make the background a single color */
+@layer base {
+  body {
+    background-color: #eae6f5;
+    padding: 2rem;
+    text-align: center;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@keyframes colorChange {
+  0%, 100% {
+    border-color: #9978f3;
+  }
+  33% {
+    border-color: #6eafe4;
+  }
+  66% {
+    border-color: #f3ec78;
+  }
+}
+
+.static-border {
+  border: 3px solid #9978f3;
+  border-radius: 1.5rem;
+}
+
+.animated-border {
+  border: 3px solid #9978f3; /* Initial border color */
+  border-radius: 1.5rem;
+  animation: colorChange 3s linear infinite;
+}
